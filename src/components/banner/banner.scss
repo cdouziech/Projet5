@@ -1,0 +1,33 @@
+.banner {
+    position: relative;
+    width: 80%;
+    height: 200px;
+    background-color: blue;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        display: block;
+        width:100%;
+        min-height:100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    p{
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 48px;
+        font-weight: 700;
+    }
+    &--shadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 60%;
+        border-radius: inherit;
+    }
+}
