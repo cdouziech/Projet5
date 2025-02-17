@@ -2,7 +2,6 @@ import './banner.scss';
 import PropTypes from 'prop-types';
 
 function Banner({img_path,shadow,title}){
-    console.log(img_path);
     if (shadow){
         return(
             <div className='banner'>

@@ -1,9 +1,9 @@
 .banner {
     position: relative;
-    width: 80%;
+    width: 86%;
     height: 200px;
     background-color: blue;
-    border-radius: 20px;
+    border-radius: 25px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,9 @@
         color: rgb(255, 255, 255);
         font-size: 48px;
         font-weight: 700;
+        @media (max-width : 880px) {
+            font-size: 32px;
+        }
     }
     &--shadow{
         position: absolute;
