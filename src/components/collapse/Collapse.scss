@@ -1,0 +1,27 @@
+.collapse{
+    width: 1023px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    &__head{
+        background-color: #FF6060;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    &__content{
+        background-color: rgb(192, 192, 192);
+        color: black;
+    }
+    img{
+        width: 32px;
+        height: 32px;
+    }
+    
+}

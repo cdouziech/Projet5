@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router";
+
 import logements from 'C:/openclassroom/P5/Projet5/logements.json'
 import Banner from 'C:/openclassroom/P5/Projet5/src/components/banner/banner.jsx';
 import bannerImg from 'C:/openclassroom/P5/Projet5/src/assets/homeBanner.png'
@@ -8,13 +10,13 @@ console.log(logements[0]);
 
 
 function Home() {
-
+  const navigate = useNavigate();
   return (
     <>
       <div className='homePage'>
         <Banner 
           img_path= {bannerImg}
-          shadow = {1}
+          shadow = {1} //1 means shadow is on; 0 means there's no shadow at all
           title ='Chez vous, partout et ailleurs'
         ></Banner>
         <div className='cardsContainer'>
@@ -24,11 +26,11 @@ function Home() {
             title={lgt.title}
             alt={"Image de"+ lgt}
             key={lgt.id}
+            onClick ={() => navigate('/logement/'+ lgt.id)}
             ></Card>
           ))}
         </div>
       </div>
-      
     </>
   )
 }

@@ -6,11 +6,11 @@
     align-items: center;
     .cardsContainer{
         width: 86%;
-        height: 200px;
         background-color: #F6F6F6;
         border-radius: 25px;
         margin: 40px 0 40px 0;
-        
-        
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 40px;
     }
 }
