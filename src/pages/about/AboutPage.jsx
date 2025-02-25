@@ -13,8 +13,8 @@ function About(){
                 title =''
             ></Banner>
             <Collapse 
-            title="qq"
-            content="kk"
+            title=""
+            content=""
             ></Collapse>
         </div>
     );

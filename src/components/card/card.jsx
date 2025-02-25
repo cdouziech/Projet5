@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Card({img_path,alt,title,onClick}){
     return(
         <div className='cardContainer' onClick={onClick}>
-            <img src={img_path} alt={alt} />
+            <img src={img_path} alt={'Image de '+ title} />
             <div className='cardShadow'></div>
             <p>{title}</p>
         </div>

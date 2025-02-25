@@ -10,7 +10,10 @@
         border-radius: 25px;
         margin: 40px 0 40px 0;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
         flex-wrap: wrap;
-        padding-bottom: 40px;
+        padding: 40px 0 40px 0;
     }
 }

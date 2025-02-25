@@ -1,10 +1,8 @@
 .cardContainer{
     position: relative;
-    width: 340px;
-    height: 340px;
-    margin: 40px;
-    margin-bottom: 0;
-
+    width: 22.5vw;
+    height: 22.5vw ;
+    margin: 0;
     display: flex;
     border-radius: 10px;
     background-color: orange;
@@ -18,8 +16,8 @@
     }
     p{
         position: absolute;
-        left: 15px;
-        top: 260px;
+        left: 1.7vw;
+        top: 18vw;
         color: white;
         font-weight: 700;
         font-size: 18px;
