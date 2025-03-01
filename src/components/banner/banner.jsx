@@ -2,21 +2,13 @@ import './banner.scss';
 import PropTypes from 'prop-types';
 
 function Banner({img_path,shadow,title}){
-    if (shadow){
-        return(
-            <div className='banner'>
-                <img src={img_path} alt="photo de paysage" />
-                <div className='banner--shadow'>ez</div>
-                <p>{title}</p>
-            </div>
-        )
-    }
-    return (
+    return(
         <div className='banner'>
             <img src={img_path} alt="photo de paysage" />
-            <p>{title}</p>    
+            {shadow ? <div className='banner--shadow'></div> : null}
+            <p>{title}</p>
         </div>
-    );
+    )
 }
 Banner.propTypes = {
     img_path: PropTypes.string.isRequired,

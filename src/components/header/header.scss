@@ -4,18 +4,22 @@ header {
     align-items: center;
     padding: 50px;
     padding-top: 25px;
-    button{
+    .link{
         background-color: white;
         border: none;
         font-family: "Montserrat", serif;
         font-size: 17px;
         padding: 0;
+        text-decoration: none;
     };
-    button:hover{
+    .link:hover{
         text-decoration: underline;
         cursor: pointer;
     }
-    button:first-child{
+    .link:first-child{
         padding-right: 20px;
+    }
+    .link.active{
+        text-decoration: underline;
     }
 }

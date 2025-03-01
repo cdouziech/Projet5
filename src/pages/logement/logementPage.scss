@@ -47,4 +47,19 @@
             }
         }
     }
+    &__collapseContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        color: white;
+        width: 86%;
+        .collapse{
+            width: 50%;
+            color: aqua;
+            h1{
+                color: white;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }

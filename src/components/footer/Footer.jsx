@@ -1,5 +1,5 @@
 import './footer.scss'
-import logo from 'C:/openclassroom/P5/Projet5/src/assets/logoWHITE.png';
+import logo from '../../assets/logoWHITE.png';
 
 function Footer(){
     return (

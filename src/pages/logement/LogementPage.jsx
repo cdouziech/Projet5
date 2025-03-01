@@ -1,9 +1,10 @@
 import { useParams } from "react-router";
-import Banner from 'C:/openclassroom/P5/Projet5/src/components/banner/banner.jsx';
+import Banner from '../../components/banner/banner.jsx';
 import './logementPage.scss';
 import { useEffect, useState } from "react";
 import red_star_path from "../../assets/red-star.svg"
 import grey_star_path from "../../assets/grey-star.svg"
+import Collapse from "../../components/collapse/Collapse.jsx";
 
 function Logement() {
     const { id } = useParams(); // get the id from the URL
@@ -14,15 +15,13 @@ function Logement() {
         fetch("/logements.json")
             .then((response) => response.json())
             .then((data) => {
-                console.log("Données chargées dans Logement.js :", data);
-                // Cherche le logement avec l'id correspondant
+                console.log("Données :", data);
                 const logementTrouve = data.find((lgmt) => lgmt.id === id);
                 setLogement(logementTrouve); // Met à jour l'état avec le logement trouvé
             })
             .catch((error) => console.error("Erreur lors du chargement des logements :", error));
-    }, [id]); // N'exécute que lorsque l'id change
+    }, [id]);
 
-    // Affiche un message de chargement si le logement n'est pas encore trouvé
     if (!logement) {
         return <p>Chargement...</p>;
     }
@@ -64,7 +63,16 @@ function Logement() {
             </div>
 
             <div className="lgmtPage__collapseContainer">
-                {/* Contenu à développer */}
+                <Collapse
+                    title="Description"
+                    content={logement.description}
+                    className ="collapse"
+                ></Collapse>
+                <Collapse
+                    title="Equipements"
+                    content={logement.equipement}
+                    className ="collapse"
+                ></Collapse>
             </div>
         </div>
     );

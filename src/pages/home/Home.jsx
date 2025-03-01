@@ -1,7 +1,7 @@
 import { useNavigate} from "react-router";
 
-import Banner from 'C:/openclassroom/P5/Projet5/src/components/banner/banner.jsx';
-import bannerImg from 'C:/openclassroom/P5/Projet5/src/assets/homeBanner.png'
+import Banner from '../../components/banner/banner.jsx';
+import bannerImg from '../../assets/homeBanner.png'
 import './home.scss'
 import Card from '../../components/card/card';
 import {useState,useEffect} from 'react';

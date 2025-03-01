@@ -1,7 +1,7 @@
 import './card.scss';
 import PropTypes from 'prop-types';
 
-function Card({img_path,alt,title,onClick}){
+function Card({img_path,title,onClick}){
     return(
         <div className='cardContainer' onClick={onClick}>
             <img src={img_path} alt={'Image de '+ title} />
@@ -12,8 +12,7 @@ function Card({img_path,alt,title,onClick}){
 }
 
 Card.propTypes = {
-    img_path: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired, 
+    img_path: PropTypes.string.isRequired, 
     title: PropTypes.string.isRequired,  
     onClick: PropTypes.func 
 };
