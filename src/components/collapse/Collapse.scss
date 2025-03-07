@@ -18,11 +18,40 @@
     }
     &__content{
         background-color: rgb(192, 192, 192);
-        color: black;
+        color: rgb(0, 0, 0);
+        animation-name: collapseIn;
+        animation-duration: 2s;
+        overflow: hidden;
     }
     img{
         width: 32px;
         height: 32px;
+        transition-duration: 1s;
     }
-    
+    .opened_arrow {
+        transform: rotate(180deg);
+        transition-duration: 1s;
+    }
+    .opened_content {
+        animation-name: collapseOut;
+        animation-duration: 2s;
+    }
+
+}
+@keyframes collapseIn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes collapseOut {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0;
+    }
 }

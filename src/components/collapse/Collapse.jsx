@@ -14,10 +14,11 @@ function Collapse({ title, content }) {
                     src={arrow_btn} 
                     alt="arrow icon" 
                     onClick={() => switchCollapse(!collapseOpened)} 
+                    className={`${collapseOpened ? 'opened_arrow' : ''}`}
                 />
             </div>                                                        
             {collapseOpened && (
-                <div className="collapse__content">
+                <div className={` collapse__content ${!collapseOpened ? 'opened_content' : ''}`}>
                     <p>{content}</p>
                 </div>
             )}

@@ -1,0 +1,29 @@
+.carrousel {
+    position: relative;
+    width: 86%;
+    height: 400px;
+    background-color: blue;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .banner{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .navArrow {
+        width:50px ;
+        height: 50px;
+    }
+    .arrowsContainer{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        bottom: 200px;
+    }
+}

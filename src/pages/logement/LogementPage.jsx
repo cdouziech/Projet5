@@ -1,10 +1,10 @@
 import { useParams } from "react-router";
-import Banner from '../../components/banner/banner.jsx';
 import './logementPage.scss';
 import { useEffect, useState } from "react";
 import red_star_path from "../../assets/red-star.svg"
 import grey_star_path from "../../assets/grey-star.svg"
 import Collapse from "../../components/collapse/Collapse.jsx";
+import Carrousel from '../../components/caroussel/crsl.jsx';
 
 function Logement() {
     const { id } = useParams(); // get the id from the URL
@@ -28,11 +28,10 @@ function Logement() {
 
     return (
         <div className="lgmtPage">
-            <Banner
-                img_path={logement.cover}
-                shadow={0}
-                title=""
-            ></Banner>
+            <Carrousel
+                imgsPath={logement.pictures}
+                maxIndex={logement.pictures.length}
+            ></Carrousel>
 
             <div className="lgmtPage__infos">
                 <div>

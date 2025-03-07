@@ -10,6 +10,7 @@ function Home() {
 	const navigate = useNavigate();
 	
 	const [logements, setLogements] = useState([]);
+	
 	useEffect(() => {
     fetch("/logements.json")
     .then((response) => response.json())
@@ -21,9 +22,9 @@ function Home() {
 	return (
     <div className='homePage'>
         <Banner 
-        	img_path= {bannerImg}
+            img_path= {bannerImg}
         	shadow = {1} //1 means shadow is on; 0 means there's no shadow at all
-        	title ='Chez vous, partout et ailleurs'
+            title ='Chez vous, partout et ailleurs'
         ></Banner>
         <div className='cardsContainer'>
         {logements.map((lgt)=>(
