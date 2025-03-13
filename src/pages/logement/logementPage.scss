@@ -21,6 +21,7 @@
         display: flex;
         justify-content: space-between;
         width: 86%;
+        @media (max-width : 600px) {flex-direction: column}
         &-author{
             margin-top: 20px;
             display: flex;
@@ -30,10 +31,21 @@
             color: #FF6060;
             p{
                 text-align: end;
+                
+                @media (max-width : 600px) {margin: 0;}
             }
             img {
                 border-radius: 50%;
                 height: 80px;
+                @media (max-width : 600px) {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            @media (max-width : 600px) {
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
             }
         }
         &-tags{
@@ -55,15 +67,31 @@
         }
         .author-and-rating {
             width: 15%;
+            @media (max-width : 1000px) { width: 30%};
+            @media (max-width : 600px) {
+                width: 100%;
+                display: flex;
+                flex-flow: row-reverse;
+                justify-content: center;
+                align-items: center;
+            }
         }
         &-rating{
             display: flex;
             justify-content: space-between;
             width: 100%;
             margin-top: 10px;
+            @media (max-width : 600px) {
+                justify-content: flex-start;;
+            }
             img{
                 width: 30px;
                 height: 30px;
+                @media (max-width : 600px) {
+                    width: 13px;
+                    height: 13px;
+                    margin-left: 4px;
+                }
 
             }
         }
@@ -74,5 +102,9 @@
         gap: 10%;
         color: white;
         width: 86%;
+        @media (max-width : 600px) {
+            flex-direction: column;
+            width: 89.287vw;
+        }
     }
 }
