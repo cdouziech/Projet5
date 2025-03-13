@@ -44,7 +44,7 @@ function Logement() {
                     </div>
                 </div>
 
-                <div>
+                <div className="author-and-rating">
                     <div className="lgmtPage__infos-author">
                         <p>{logement.host.name}</p>
                         <img src={logement.host.picture} alt="photo du propriétaire de la location" />
@@ -64,13 +64,11 @@ function Logement() {
             <div className="lgmtPage__collapseContainer">
                 <Collapse
                     title="Description"
-                    content={logement.description}
-                    className ="collapse"
+                    content={<p className="description">{logement.description}</p>}
                 ></Collapse>
                 <Collapse
                     title="Equipements"
-                    content={logement.equipement}
-                    className ="collapse"
+                    content={<div className="Equipments">{logement.equipments.map((eqpt)=>(<span key={eqpt}>{eqpt}</span>))}</div>}
                 ></Collapse>
             </div>
         </div>

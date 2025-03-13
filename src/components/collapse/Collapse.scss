@@ -10,18 +10,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        h1{
-            font-size: 24px;
-            font-weight: 700;
-            margin-left: 30px;
-        }
+        font-size: 24px;
+        font-weight: 700;
     }
     &__content{
         background-color: rgb(192, 192, 192);
         color: rgb(0, 0, 0);
-        animation-name: collapseIn;
-        animation-duration: 2s;
+        transition-duration: 2s;
         overflow: hidden;
+        height: 0;
     }
     img{
         width: 32px;
@@ -32,26 +29,8 @@
         transform: rotate(180deg);
         transition-duration: 1s;
     }
-    .opened_content {
-        animation-name: collapseOut;
-        animation-duration: 2s;
+    .opened_content{
+        height: 10vh;
     }
 
-}
-@keyframes collapseIn {
-    from {
-        height: 0;
-    }
-    to {
-        height: 100%;
-    }
-}
-
-@keyframes collapseOut {
-    from {
-        height: 100%;
-    }
-    to {
-        height: 0;
-    }
 }

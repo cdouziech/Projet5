@@ -21,7 +21,21 @@
         display: flex;
         justify-content: space-between;
         width: 86%;
-
+        &-author{
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 10px;
+            color: #FF6060;
+            p{
+                text-align: end;
+            }
+            img {
+                border-radius: 50%;
+                height: 80px;
+            }
+        }
         &-tags{
             margin-top: 15px;
             display: flex;
@@ -39,11 +53,18 @@
                 font-weight: 500;
             }
         }
-        
+        .author-and-rating {
+            width: 15%;
+        }
         &-rating{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
             img{
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
+
             }
         }
     }
@@ -53,13 +74,5 @@
         gap: 10%;
         color: white;
         width: 86%;
-        .collapse{
-            width: 50%;
-            color: aqua;
-            h1{
-                color: white;
-                margin-bottom: 20px;
-            }
-        }
     }
 }

@@ -5,8 +5,11 @@
     margin: 0;
     display: flex;
     border-radius: 10px;
-    background-color: orange;
     overflow: hidden;
+    @media (max-width : 500px) {
+        width: 89.287vw;
+        height: 89.287vw;
+    }
     img{
         display: block;
         width: 100%;

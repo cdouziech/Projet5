@@ -15,5 +15,11 @@
         gap: 40px;
         flex-wrap: wrap;
         padding: 40px 0 40px 0;
+        @media (max-width : 500px) {
+            flex-direction: column;
+            background-color: white;
+            width: 89.287%;
+            padding: 0;
+        }
     }
 }
