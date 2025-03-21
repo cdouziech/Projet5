@@ -21,7 +21,7 @@ function Collapse({ title, content }) {
             </div>
         </div>
     );
-}         // display le content de manière permanente pour pouvoir animer au retour
+}        
 Collapse.propTypes = {
     content : PropTypes.string.isRequired, 
     title: PropTypes.string.isRequired,  

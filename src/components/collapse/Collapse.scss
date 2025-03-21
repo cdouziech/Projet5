@@ -36,6 +36,8 @@
         transition-duration: 2s;
         overflow: hidden;
         height: 0;
+        padding-left: 10px;
+        padding-right: 10px;
         @media (max-width : 1024px) {
             font-size: 14px;
         }
@@ -52,14 +54,10 @@
     }
     .opened_arrow {
         transform: rotate(180deg);
-        transition-duration: 1s;
+
     }
     .opened_content{
         height: 100%;
-
-        @media (max-width : 1024px) {
-            height: 100%;
-        }
     }
 
 }

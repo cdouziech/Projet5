@@ -9,8 +9,8 @@ import Carrousel from '../../components/caroussel/crsl.jsx';
 function Logement() {
     const { id } = useParams(); // get the id from the URL
     const navigate = useNavigate();
-    
-    const [logement, setLogement] = useState(null); // Utiliser un état pour le logement spécifique
+
+    const [logement, setLogement] = useState(null); 
 
     useEffect(() => {
         const fetchLogement = async () => {
@@ -18,14 +18,14 @@ function Logement() {
                 const response = await fetch("/logements.json");
                 const data = await response.json();
                 const logementTrouve = data.find((lgmt) => lgmt.id === id);
-                if (logementTrouve) {
+                if (await logementTrouve) {
                     setLogement(logementTrouve);
                 } else {
-                    navigate("/error"); // Redirection si le logement n'est pas trouvé
+                    navigate("/error"); 
                 }
             } catch (error) {
                 console.error("Erreur lors du chargement des logements :", error);
-                navigate("/error"); // Redirection en cas d'erreur
+                navigate("/error"); 
             }
         };
     
@@ -33,7 +33,7 @@ function Logement() {
     }, [id, navigate]);
 
     if (!logement) {
-        return <p>Chargement...</p>;
+        return <p>Chargement</p>;
     }
     return (
         <div className="lgmtPage">
