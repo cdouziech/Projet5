@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 
 function Collapse({ title, content }) {
     const [collapseOpened, switchCollapse] = useState(false); // false = fermé, true = ouvert
-    console.log(collapseOpened);
     return (                                               
         <div className="collapse">
             <div className="collapse__head">
-                {title}
+                <p>{title}</p>
                 <img 
                     src={arrow_btn} 
                     alt="arrow icon" 

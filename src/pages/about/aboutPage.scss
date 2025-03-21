@@ -4,4 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .collapseContainer{
+        display: flex;
+        flex-direction: row;
+        width: 1023px;
+        flex-wrap: wrap;
+        @media (max-width : 1024px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 }

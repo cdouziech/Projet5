@@ -28,7 +28,7 @@ function Carrousel({imgsPath, maxIndex}){
                 />
             </div> 
             <div className="counter">
-                <p>{activeIndex}/{maxIndex-1}</p>
+                <p>{activeIndex+1}/{maxIndex}</p>
             </div>
         </>
         : null}

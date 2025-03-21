@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import './logementPage.scss';
 import { useEffect, useState } from "react";
 import red_star_path from "../../assets/red-star.svg"
@@ -8,24 +8,33 @@ import Carrousel from '../../components/caroussel/crsl.jsx';
 
 function Logement() {
     const { id } = useParams(); // get the id from the URL
-
+    const navigate = useNavigate();
+    
     const [logement, setLogement] = useState(null); // Utiliser un état pour le logement spécifique
 
     useEffect(() => {
-        fetch("/logements.json")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Données :", data);
+        const fetchLogement = async () => {
+            try {
+                const response = await fetch("/logements.json");
+                const data = await response.json();
                 const logementTrouve = data.find((lgmt) => lgmt.id === id);
-                setLogement(logementTrouve); // Met à jour l'état avec le logement trouvé
-            })
-            .catch((error) => console.error("Erreur lors du chargement des logements :", error));
-    }, [id]);
+                if (logementTrouve) {
+                    setLogement(logementTrouve);
+                } else {
+                    navigate("/error"); // Redirection si le logement n'est pas trouvé
+                }
+            } catch (error) {
+                console.error("Erreur lors du chargement des logements :", error);
+                navigate("/error"); // Redirection en cas d'erreur
+            }
+        };
+    
+        fetchLogement();
+    }, [id, navigate]);
 
     if (!logement) {
         return <p>Chargement...</p>;
     }
-
     return (
         <div className="lgmtPage">
             <Carrousel
@@ -68,7 +77,7 @@ function Logement() {
                 ></Collapse>
                 <Collapse
                     title="Equipements"
-                    content={<div className="Equipments">{logement.equipments.map((eqpt)=>(<span key={eqpt}>{eqpt}</span>))}</div>}
+                    content={<div className="Equipments">{logement.equipments.map((eqpt)=>(<li key={eqpt}>{eqpt}</li>))}</div>}
                 ></Collapse>
             </div>
         </div>
