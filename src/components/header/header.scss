@@ -2,8 +2,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
     width: 86%;
-    padding: 40px 0 40px 0;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     .link{
         background-color: white;
         border: none;
@@ -28,7 +31,7 @@ header {
         text-decoration: underline;
     }
     @media (max-width : 1024px) {
-        padding: 20px;
+        width: 89.285vw;
         img{
             height: 50px;
             width: 145px;

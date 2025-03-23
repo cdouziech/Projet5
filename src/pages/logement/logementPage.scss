@@ -144,9 +144,14 @@
         gap: 10%;
         color: white;
         width: 86%;
+        margin-top: 24px;
+        margin-bottom: 50px;
         @media (max-width : 1024px) {
             width: 89.287vw;
             flex-wrap: wrap;
+            margin-top: 19px;
+            margin-bottom: 19px;
+            gap: 20px;
         }
     }
 }
