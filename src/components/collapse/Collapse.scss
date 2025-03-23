@@ -2,8 +2,6 @@
     width: 1023px;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    margin-bottom: 40px;
     @media (max-width : 1024px) {
         width: 89.8vw;
         margin-top: 20px;
@@ -54,7 +52,6 @@
     }
     .opened_arrow {
         transform: rotate(180deg);
-
     }
     .opened_content{
         height: 100%;
